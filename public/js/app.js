@@ -2919,8 +2919,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -3457,7 +3455,8 @@ __webpack_require__.r(__webpack_exports__);
     signup: function signup() {
       var _this = this;
 
-      axios.post('http://localhost:8000/api/auth/signup', this.form).then(function (res) {
+      // axios.post('http://localhost:8000/api/auth/signup', this.form)
+      axios.post('/api/auth/signup', this.form).then(function (res) {
         User.responseAfterLogin(res);
 
         _this.$router.push({
@@ -21905,7 +21904,7 @@ if (!CodeMirror.mimeModes.hasOwnProperty("text/html"))
 
 /***/ }),
 
-/***/ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./node_modules/simplemde/dist/simplemde.min.css?e57b":
+/***/ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./node_modules/simplemde/dist/simplemde.min.css":
 /*!***************************************************************************************************************************************!*\
   !*** ./node_modules/css-loader??ref--6-1!./node_modules/postcss-loader/src??ref--6-2!./node_modules/simplemde/dist/simplemde.min.css ***!
   \***************************************************************************************************************************************/
@@ -54677,7 +54676,7 @@ process.umask = function() { return 0; };
 /***/ (function(module, exports, __webpack_require__) {
 
 
-var content = __webpack_require__(/*! !../../css-loader??ref--6-1!../../postcss-loader/src??ref--6-2!./simplemde.min.css */ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./node_modules/simplemde/dist/simplemde.min.css?e57b");
+var content = __webpack_require__(/*! !../../css-loader??ref--6-1!../../postcss-loader/src??ref--6-2!./simplemde.min.css */ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./node_modules/simplemde/dist/simplemde.min.css");
 
 if(typeof content === 'string') content = [[module.i, content, '']];
 
@@ -59992,10 +59991,7 @@ var render = function() {
     [
       _c(
         "v-toolbar",
-        {
-          staticStyle: { "border-radius": "20px 20px 0px 0px" },
-          attrs: { color: "primary", dark: "", extended: "", flat: "" }
-        },
+        { attrs: { color: "primary", dark: "" } },
         [
           _c(
             "v-btn",
@@ -60022,8 +60018,8 @@ var render = function() {
             "v-avatar",
             {
               staticClass: "col-xs-12",
-              staticStyle: { "margin-top": "-85px", "z-index": "100" },
-              attrs: { color: "orange", size: "70", elevation: 8 }
+              staticStyle: { "margin-top": "45px", "z-index": "100" },
+              attrs: { color: "orange", size: "90", elevation: 8 }
             },
             [
               _c("img", {
@@ -60052,8 +60048,9 @@ var render = function() {
                 {
                   staticClass: "mx-auto",
                   staticStyle: {
-                    "margin-top": "-40px",
-                    "border-radius": "20px 20px 110px 20px"
+                    "margin-top": "-30px",
+                    "border-radius": "20px 20px 90px 20px",
+                    width: "90%"
                   },
                   attrs: { "max-width": "800", elevation: 4 }
                 },
@@ -112564,7 +112561,8 @@ function () {
     value: function login(data) {
       var _this = this;
 
-      axios.post('http://localhost:8000/api/auth/login', data) // .then(res => console.log(res.data))
+      axios.post('/api/auth/login', data) // axios.post('http://localhost:8000/api/auth/login', data)
+      // .then(res => console.log(res.data))
       .then(function (res) {
         return _this.responseAfterLogin(res);
       })["catch"](function (error) {

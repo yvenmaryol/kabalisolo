@@ -5,7 +5,8 @@ class User{
 
     login(data){
         
-        axios.post('http://localhost:8000/api/auth/login', data)
+        axios.post('/api/auth/login', data)
+        // axios.post('http://localhost:8000/api/auth/login', data)
         // .then(res => console.log(res.data))
         .then(res => this.responseAfterLogin(res))
         .catch(error => console.log(error.response.data))

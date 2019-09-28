@@ -124,7 +124,8 @@ export default {
 
         methods:{
             signup(){
-                axios.post('http://localhost:8000/api/auth/signup', this.form)
+                // axios.post('http://localhost:8000/api/auth/signup', this.form)
+                axios.post('/api/auth/signup', this.form)
                 .then(res => {
                     User.responseAfterLogin(res)
                     this.$router.push({name: 'account'})

@@ -3,9 +3,7 @@
     <v-toolbar
       color="primary"
       dark
-      extended
-      flat
-      style="border-radius: 20px 20px 0px 0px;"
+   
     >
       <!-- <v-app-bar-nav-icon></v-app-bar-nav-icon> -->
       <v-btn icon color="white"
@@ -16,8 +14,8 @@
       
     </v-toolbar>
     <v-row justify="center">
-    <v-avatar color="orange" size="70" 
-    style="margin-top: -85px; z-index:100" 
+    <v-avatar color="orange" size="90" 
+    style="margin-top: 45px; z-index:100" 
     class="col-xs-12"
     :elevation="8"
     >
@@ -33,7 +31,7 @@
     <v-card
       class="mx-auto"
       max-width="800"
-      style="margin-top: -40px; border-radius: 20px 20px 110px 20px;"
+      style="margin-top: -30px; border-radius: 20px 20px 90px 20px; width:90% "
       :elevation="4"
     >
       <v-toolbar flat
